@@ -1,6 +1,7 @@
 :root {
   --navy: #001d61;
   --blue: #0f56a6;
+  --red: #d82e29;
   --ink: #18212f;
   --muted: #5d6675;
   --line: #dbe4ef;
@@ -22,6 +23,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a,
+summary {
+  overflow-wrap: break-word;
 }
 
 img {
@@ -72,6 +83,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   max-width: 1180px;
   margin: 0 auto;
   padding: 13px 22px;
@@ -112,7 +124,7 @@ a {
 .nav-book,
 .button-primary {
   color: var(--white);
-  background: var(--navy);
+  background: var(--red);
 }
 
 .button-secondary {
@@ -123,6 +135,7 @@ a {
 
 .nav-toggle {
   display: none;
+  flex: 0 0 44px;
   width: 44px;
   height: 44px;
   border: 1px solid var(--line);
@@ -162,6 +175,8 @@ a {
 
 .hero-content {
   position: relative;
+  width: min(100%, 760px);
+  min-width: 0;
   max-width: 760px;
   margin-left: max(24px, calc((100vw - 1180px) / 2));
   padding: 84px 24px 120px 0;
@@ -209,6 +224,14 @@ a {
   gap: 42px;
   align-items: end;
   margin-bottom: 34px;
+}
+
+.section-copy > *,
+.intro-grid > *,
+.rv-card > *,
+.steps > *,
+.contact-panel > * {
+  min-width: 0;
 }
 
 .section-copy h2,
@@ -487,6 +510,10 @@ details p {
     display: none;
   }
 
+  .nav {
+    padding: 12px 18px;
+  }
+
   .brand img {
     width: 112px;
   }
@@ -501,7 +528,7 @@ details p {
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 34px;
   }
 
   .hero p:not(.eyebrow) {
@@ -523,7 +550,7 @@ details p {
 
   .section-copy h2,
   .contact h2 {
-    font-size: 32px;
+    font-size: 29px;
   }
 
   .rv-card {
